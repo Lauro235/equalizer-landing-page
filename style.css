@@ -1,0 +1,78 @@
+/* Font Imports */
+
+
+/*
+=======================
+Variables
+=======================
+*/
+
+
+
+/*
+=======================
+Set up
+=======================
+*/
+
+html {
+        box-sizing: border-box;
+}
+
+*,*::before, *::after {
+        box-sizing: inherit;
+}
+
+body {
+        margin: 0;
+}
+
+/*
+=======================
+Typography
+=======================
+*/
+
+
+/*
+=======================
+Layout
+=======================
+*/
+
+section#one {
+        background-image: url('/assets/bg-main-mobile.png');
+        background-size: 100%;
+        height: 1em;
+        padding-bottom: 20em;
+        background-repeat: no-repeat;
+        background-position: 8em 150%;
+}
+
+section#two {
+        background-color: black;
+        border-radius: 10px;
+} 
+
+#picture {
+        background-image: url('/assets/equalizer.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 1em;
+        width: 100%;
+        padding-bottom: 31em;
+}
+
+.phone-img {
+        position: relative;
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        top: -4em;
+}
+
+/*
+=======================
+Media Queries
+=======================
+*/
