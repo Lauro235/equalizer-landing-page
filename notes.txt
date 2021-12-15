@@ -1,0 +1,11 @@
+How to add svg files as a background image
+
+https://www.freecodecamp.org/news/use-svg-images-in-css-html/
+
+https://www.w3schools.com/cssref/css3_pr_background.asp
+
+Using the background-position property
+
+https://www.w3schools.com/cssref/pr_background-position.asp
+
+Images can only be centered using margin: 0 auto; after they have been turned into display: block; elements
