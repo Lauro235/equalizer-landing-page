@@ -7,7 +7,13 @@ Variables
 =======================
 */
 
-
+:root {
+        --var-grey: #66E2DC;
+        --var-light-red:#FA7453;
+        --var-green-pink:#FFB964;
+        --var-off-white:#FCFAF9;
+        --var-off-black:#191826;
+}
 
 /*
 =======================
@@ -51,16 +57,21 @@ section#one {
 
 section#two {
         background-color: black;
-        border-radius: 10px;
-} 
+        border-radius: 7px;
+}
+
+section#three {
+        background-color: var(--var-light-red);
+        margin-top: -4em;
+        border-radius: 7px;
+}
 
 #picture {
         background-image: url('/assets/equalizer.svg');
         background-size: 100%;
         background-repeat: no-repeat;
-        height: 1em;
         width: 100%;
-        padding-bottom: 31em;
+        padding-bottom: 1em;
 }
 
 .phone-img {
