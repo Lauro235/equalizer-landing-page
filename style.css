@@ -101,11 +101,20 @@ Layout
 =======================
 */
 
+.container {
+        width: min(100%, 750px);
+        margin: 0 auto;
+}
+
+section {
+        padding: 2em;
+}
+
+
 section#one {
         background-image: url('/assets/bg-main-mobile.png');
         background-size: 500px;
         height: fit-content;
-        padding: 3em;
         margin-bottom: 8em;
         background-repeat: no-repeat;
         background-position: 3em -13em;
@@ -115,33 +124,36 @@ section#two {
         background-color: black;
         border-radius: 12px;
         position: relative;
+        width: min(100%, 750px);
+        margin: 2em auto 0 auto;
 }
 
 section#picture {
-        background-image: url('/assets/bg-pattern-2.svg');
+        background-image: url('assets/bg-pattern-2.svg');
         background-size: contain;
         background-repeat: no-repeat;
         margin: 0 auto;
         width: 100%;
-        max-width: 280px;
-        padding-bottom: 1em;
+        max-width: 480px;
+        height: inherit;
 }
 
 .phone-img {
         position: relative;
-        width: 85%;
-        max-width: 450px;
+        width: max(85%, 300px);
         margin: 0 auto;
         display: block;
-        bottom: 7em;
+        bottom: 12rem;
 }
 
-section#three {
+section#call-to-action {
         background-color: var(--var-light-red);
-        margin-top: -2em;
+        margin-top: -12em;
         border-radius: 12px;
-        padding: .5em 3em 2em 3em;
         color: var(--var-off-white);
+        width: min(100%, 550px);
+        align-self: flex-end;
+        z-index: 1;
 }
 
 .span-big {
@@ -203,7 +215,14 @@ Specifics
         margin-right: .4em;
 }
 
+.cta-price {
+        display: flex;
+        align-items: center; 
+}
 
+.cta-price > span {
+        margin-right: .8rem;
+}
 
 
 /*
@@ -212,20 +231,6 @@ Media Queries
 =======================
 */
 
-@media (min-width:750px) {
-        section#two {
-                width: 90%;
-                margin: 0 auto;
-                display: flex;
-        }
-        section#picture {
-                width: 280;
-                height: 420;
-                margin-top: -4em;
+/* @media (min-width:750px) {
 
-        }
-        .phone-img {
-                right: 9em;
-                bottom: 3em;
-        }
-}
+} */
