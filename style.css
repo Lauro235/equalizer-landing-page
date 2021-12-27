@@ -137,7 +137,7 @@ Media Queries
 .phone-img {
         transform: translate(0px, -23%);
         display: block;
-        width: 60%;
+        width: min(300px, 60%);
         margin: 0 auto;
 }
 
