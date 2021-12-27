@@ -2,30 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 
-/* 
-
-font-family: 'IBM Plex Sans', sans-serif;
-
-Includes regular weight 400 and bold weight 700
-
-*/
-
 /*
 =======================
 Variables
 =======================
 */
-
 :root {
-        --var-grey: #66E2DC;
-        --var-light-red:#FA7453;
-        --var-green-pink:#FFB964;
-        --var-off-white:#FCFAF9;
-        --var-off-black:#191826;
-        --var-h1: normal normal 700 clamp(2.3em, 4vw, 48px)/clamp(1em, 3vw, 48px) 'IBM Plex Sans', sans-serif;
-        --var-h2: normal normal 700 clamp(1.5em , 3.8vw, 40px)/clamp(1.2em , 3.2vw , 32px) 'IBM Plex Sans', sans-serif;
-        --var-body1: normal normal 400 20px/34px 'IBM Plex Sans', sans-serif;
-        --var-body2: normal normal 400 16px/26px 'IBM Plex Sans', sans-serif;
+--grey: #66E2DC;
+--light-red: #FA7453;
+--greeny-pink: #FFB964;
+--off-white: #FCFAF9;
+--off-black: #191826;
+--var-h1: normal normal 700 clamp(2.3em, 4vw, 48px)/clamp(1em, 3vw, 48px) 'IBM Plex Sans', sans-serif;
+--var-h2: normal normal 700 clamp(1.5em , 3.8vw, 40px)/clamp(1.2em , 3.2vw , 32px) 'IBM Plex Sans', sans-serif;
+--var-body1: normal normal 400 20px/34px 'IBM Plex Sans', sans-serif;
+--var-body2: normal normal 400 16px/26px 'IBM Plex Sans', sans-serif;
 }
 
 /*
@@ -34,6 +25,26 @@ Set up
 =======================
 */
 
+html,	body,	div,	span,	object,	iframe,
+h1,	h2,	h3,	h4,	h5,	h6,
+p,	blockquote,	pre,	abbr,	address,
+cite,	code,	del,	dfn,	em,	img,
+ins,	kbd,	q,	samp,	small,	strong,
+sub,	sup,	var,	b,	i,	dl,
+dt,	dd,	ol,	ul,	li,	fieldset,
+form,	label,	legend,	table,	caption,
+tbody,	tfoot,	thead,	tr,	th,	td,
+article,	aside,	canvas,	details,
+figcaption,	figure,	footer,	header,	hgroup,
+menu,	nav,	section,	summary,
+time,	mark,	audio,	video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
 html {
         box-sizing: border-box;
 }
@@ -42,44 +53,12 @@ html {
         box-sizing: inherit;
 }
 
-body {
-        margin: 0;
-}
-
 /*
-=======================
-Typography
-=======================
+===================
+Helper Classes
+===================
 */
-
-h1 {
-        font: var(--var-h1);
-        letter-spacing: -1px;
-}
-
-h2 {
-        font: var(--var-h2);
-}
-
-p {
-        font: var(--var-body2);
-}
-
-button {
-        display: block;
-        width: 100%;
-        padding: 0 3em;
-}
-
-button + button {
-        margin-top: 1em;
-}
-
-/*
-=======================
-Flex
-=======================
-*/
+/*Flex*/
 
 .flex {
         display: flex;
@@ -95,6 +74,28 @@ Flex
 }
 
 
+.grid {
+        display: grid;
+}
+
+/*
+=======================
+Typography
+=======================
+*/
+
+h1 {
+        font: var(--var-h1)
+}
+
+h2 {
+        font: var(--var-h2);
+}
+
+p {
+        font: var(--var-body2)
+}
+
 /*
 =======================
 Layout
@@ -102,128 +103,13 @@ Layout
 */
 
 .container {
-        width: min(100%, 750px);
-        margin: 0 auto;
-}
-
-section {
-        padding: 2em;
-}
-
-
-section#one {
-        background-image: url('/assets/bg-main-mobile.png');
-        background-size: 500px;
-        height: fit-content;
-        margin-bottom: 8em;
-        background-repeat: no-repeat;
-        background-position: 3em -13em;
-}
-
-section#two {
-        background-color: black;
-        border-radius: 12px;
-        position: relative;
-        width: min(100%, 750px);
-        margin: 2em auto 0 auto;
-}
-
-section#picture {
-        background-image: url('assets/bg-pattern-2.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin: 0 auto;
         width: 100%;
-        max-width: 480px;
-        height: inherit;
-}
-
-.phone-img {
-        position: relative;
-        width: max(85%, 300px);
         margin: 0 auto;
-        display: block;
-        bottom: 12rem;
 }
 
-section#call-to-action {
-        background-color: var(--var-light-red);
-        margin-top: -12em;
-        border-radius: 12px;
-        color: var(--var-off-white);
-        width: min(100%, 550px);
-        align-self: flex-end;
-        z-index: 1;
+.one, .call-to-action {
+        padding: 0 3.5rem;
 }
-
-.span-big {
-        font: var(--var-h2);
-        font-size: 4em;
-}
-
-.span-small {
-        font-weight: 700;
-}
-
-.media-widgets {
-        margin-top: 4.5em;
-        gap: 1.1em;
-}
-
-footer {
-        padding: 3em;
-}
-
-/*
-=======================
-Specifics
-=======================
-*/
-
-.apple, .android {
-        border: none;
-        padding: 1.2em;
-        font-weight: 700;
-        border-radius: 12px;
-}
-
-.apple {
-        background-color: var(--var-off-black);
-        color: var(--var-off-white);
-}
-
-.apple:hover {
-        background-color: var(--var-grey);
-}
-
-.apple-logo {
-        width: 1em;
-        margin-right: .4em;
-}
-
-.android {
-        background-color: var(--var-off-white);
-        color: var(--var-off-black);
-}
-
-.android:hover {
-        background-color: var(--var-green-pink);
-}
-
-.android-logo {
-        width: 1em;
-        margin-right: .4em;
-}
-
-.cta-price {
-        display: flex;
-        align-items: center; 
-}
-
-.cta-price > span {
-        margin-right: .8rem;
-}
-
 
 /*
 =======================
@@ -231,6 +117,39 @@ Media Queries
 =======================
 */
 
-/* @media (min-width:750px) {
+/* Other */
 
-} */
+.black-bg {
+        position: relative;
+        margin-top: 100px;
+        background-color: var(--off-black);
+        border-radius: 16px;
+        width: 100%;
+}
+
+.picture {
+        background-image: url('assets/bg-pattern-2.svg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain;
+}
+
+.phone-img {
+        transform: translate(0px, -23%);
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+}
+
+.call-to-action {
+        position: relative;
+        background-color: var(--light-red);
+        border-radius: 16px;
+        padding: 1em;
+        margin-top: -10%;
+}
+
+footer {
+        width: 90%;
+        padding: 1em;
+}
